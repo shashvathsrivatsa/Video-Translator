@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Voice Translator</title>
+    <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="icon" href="URL"> -->
+
+    <script defer src="app/app.js"></script>
+
+    <link rel="stylesheet" href="styles/browser.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+    
+    <div class="translator left-translator">
+        <h1>Translator 1</h1>
+        <button class="record-button" id="left-record-button" onclick="record(this, 'left')"></button>
+        <div id="left-info-text"></div>
+        <div class="options-container">
+            <input type="text" id="left-language-input" placeholder="Enter Language">
+            <input type="text" id="left-voice-input" placeholder="Enter Voice ID">
+        </div>
+    </div>
+    <div class="translator right-translator">
+        <h1>Translator 2</h1>
+        <button class="record-button" id="right-record-button" onclick="record(this, 'right')"> &nbsp; &nbsp; </button>
+        <div id="right-info-text"></div>
+        <div class="options-container">
+            <input type="text" id="right-language-input" placeholder="Enter Language">
+            <input type="text" id="right-voice-input" placeholder="Enter Voice ID">
+        </div>
+    </div>
+
+</body>
+</html>

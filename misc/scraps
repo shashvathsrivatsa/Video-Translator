@@ -1,0 +1,21 @@
+<!-- <button class="record-button" id="left-record-button" onclick="record(this, 'left')"><i class="fa-solid fa-microphone"></i></button> -->
+
+
+function stopRecording(side) {
+    mediaRecorder.stop();
+    mediaRecorder.onstop = () => {
+        const blob = new Blob(recordedChunks, {
+            type: 'audio/webm'
+        });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${side}_recording.webm`;
+        link.click();
+    };
+    if (side == 'left') {
+        clearInterval(leftRecordingInterval);
+    } else {
+        clearInterval(rightRecordingInterval);
+    }
+}
